@@ -105,7 +105,7 @@
             <!-- ##### MESH_CONFIG ##### -->
             
                           
-                <networkConnector uri="static:(ssl://msgsvc.apps.cpaaws.com:443)"/>
+                <networkConnector uri="static:(ssl://msgsvc.apps.cpaaws.com:443)" userName="amq-user" password="password" />
    
         </networkConnectors>
 
