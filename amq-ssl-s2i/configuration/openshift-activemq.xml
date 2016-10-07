@@ -102,7 +102,7 @@
                 (i.e. messageTTL="-1") but create demand subscription only to the next connected
                 broker (i.e. consumerTTL="1"). See AMQ-4607.
             -->
-            <!-- ##### MESH_CONFIG ##### -->
+            <!-- ##### MESH_CONFIG ##### **-->
             
 <!--                          
                 <networkConnector uri="static:(ssl://msgsvc.apps.cpaaws.com:443)" userName="amq-user" password="password" />
