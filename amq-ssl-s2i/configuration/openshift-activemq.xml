@@ -103,7 +103,7 @@
                 broker (i.e. consumerTTL="1"). See AMQ-4607.
             -->
             <!-- ##### MESH_CONFIG ##### **-->
-            <networkConnector uri="static:(tcp://broker-tcp.amq-s2i-poc.svc.cluster.local:61616)" userName="amq-user" password="password" />
+            <networkConnector uri="static:(tcp://broker-tcp-ssl.amq-s2i-poc.svc.cluster.local:61617)" userName="amq-user" password="password" />
 <!--                          
                 <networkConnector uri="static:(ssl://msgsvc.apps.cpaaws.com:443)" userName="amq-user" password="password" />
    -->
