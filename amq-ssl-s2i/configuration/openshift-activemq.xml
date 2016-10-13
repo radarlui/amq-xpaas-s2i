@@ -94,21 +94,21 @@
             <managementContext createConnector="false" />
         </managementContext>
 
-       
-
+        
         <networkConnectors>
             <!--
                 In a full mesh we want messages to travel freely to any broker
                 (i.e. messageTTL="-1") but create demand subscription only to the next connected
                 broker (i.e. consumerTTL="1"). See AMQ-4607.
             -->
-            <!-- ##### MESH_CONFIG ##### **-->
-            <networkConnector uri="static:(ssl://broker-tcp-ssl.amq-s2i-poc.svc.cluster.local:61617)" userName="amq-user" password="password" />
-<!--                          
-                <networkConnector uri="static:(ssl://msgsvc.apps.cpaaws.com:443)" userName="amq-user" password="password" />
-   -->
+            <!-- ##### MESH_CONFIG ##### -->
+            
+            <!--              
+                <networkConnector uri="static:(ssl://pocmsgsvc.apps.cpaaws.com:443)"/>
+            -->
         </networkConnectors>
-
+        
+        
         <!--
             Configure message persistence for the broker. The default persistence
             mechanism is the KahaDB store (identified by the kahaDB tag).
@@ -122,6 +122,41 @@
 
         <plugins>
             <!-- ##### AUTHENTICATION ##### -->
+            
+      <authorizationPlugin>
+        <map>
+          <authorizationMap>
+            <authorizationEntries>
+              <authorizationEntry queue=">"
+                                  read="admins"
+                                  write="admins"
+                                  admin="admins" />
+              <authorizationEntry queue="CXIP.CSME.SBR.EN"
+                                  read="csme"
+                                  write="admins"
+                                  admin="admins" />
+              <authorizationEntry queue="CSME.CIS.FILE"
+                                  read="csme"
+                                  write="csme"
+                                  admin="admins" />
+              <authorizationEntry queue="OLCI.IN"
+                                  read="olci"
+                                  write="admins"
+                                  admin="admins" />
+              <authorizationEntry queue="OLCI.OUT"
+                                  read="olci"
+                                  write="olci"
+                                  admin="admins" />                
+                              <authorizationEntry topic="ActiveMQ.Advisory.>"
+                                  read="User"
+                                  write="User"
+                                  admin="User" />                
+
+            </authorizationEntries>
+          </authorizationMap>
+        </map>
+      </authorizationPlugin>            
+
         </plugins>
 
         <!--
@@ -152,6 +187,7 @@
             http://activemq.apache.org/configuring-transports.html
         -->
         <!-- ##### TRANSPORT_CONNECTORS ##### -->
+       
 
         <!-- ##### SSL_CONTEXT ##### -->
 
