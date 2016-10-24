@@ -117,10 +117,11 @@
             http://activemq.apache.org/persistence.html
         -->
         <persistenceAdapter>
-            <!--
+            
             <kahaDB directory="${activemq.data}/kahadb" />
-            -->
+            <!--
             <jdbcPersistenceAdapter dataSource="#mysql-ds" />
+            -->
         </persistenceAdapter>
 
         <plugins>
