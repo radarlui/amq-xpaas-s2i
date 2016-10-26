@@ -125,6 +125,8 @@
         </persistenceAdapter>
 
         <plugins>
+            <runtimeConfigurationPlugin checkPeriod="1000" />
+    
             <!-- ##### AUTHENTICATION ##### -->
             
       <authorizationPlugin>
