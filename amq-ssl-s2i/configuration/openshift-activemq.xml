@@ -212,7 +212,7 @@
     <property name="username" value="amqadmin"/>
     <property name="password" value="amqpassw0rd"/>
     -->
-    <property name="url" value="jdbc:mysql://192.168.35.167:33306/test?relaxAutoCommit=true"/>
+    <property name="url" value="jdbc:mysql://192.168.35.167:3306/test?relaxAutoCommit=true"/>
       
     <property name="username" value="amq-user"/>
     <property name="password" value="password"/>
