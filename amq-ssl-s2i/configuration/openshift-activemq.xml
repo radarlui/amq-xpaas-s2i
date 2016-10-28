@@ -212,10 +212,10 @@
     <property name="username" value="amqadmin"/>
     <property name="password" value="amqpassw0rd"/>
     -->
-    <property name="url" value="jdbc:mysql://eap-app-mysql.project2.svc.cluster.local/root?relaxAutoCommit=true"/>
+    <property name="url" value="jdbc:mysql://192.168.35.167:33306/test?relaxAutoCommit=true"/>
       
-    <property name="username" value="usermID"/>
-    <property name="password" value="INqvS64j"/>
+    <property name="username" value="amq-user"/>
+    <property name="password" value="password"/>
     <property name="poolPreparedStatements" value="true"/>
   </bean>
     
